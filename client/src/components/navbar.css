@@ -1,0 +1,21 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ccc;
+  padding: 10px;
+}
+.links-container {
+  padding: 10px;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+.links-container a {
+  text-decoration: none;
+  color: black;
+}
+
+.links-container a:hover {
+  color: orangered;
+}
