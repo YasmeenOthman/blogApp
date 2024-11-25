@@ -22,7 +22,10 @@ function Login() {
         email: userData.email,
         password: userData.password,
       };
-      let res = await axios.post("http://localhost:8000/users/login", newUser);
+      let res = await axios.post(
+        "https://blogapp-034p.onrender.com/users/login",
+        newUser
+      );
       console.log(res.data);
       if (res.data.status) {
         localStorage.setItem("auth-token", res.data.token);

@@ -25,7 +25,7 @@ function Register() {
         password: userData.password,
       };
       let res = await axios.post(
-        "http://localhost:8000/users/register",
+        "https://blogapp-034p.onrender.com/users/register",
         newUser
       );
       alert(res.data.msg);

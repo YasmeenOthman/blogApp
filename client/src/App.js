@@ -12,7 +12,7 @@ function App() {
 
   async function getAllBolgs() {
     try {
-      let res = await axios.get("http://localhost:8000/blogs/");
+      let res = await axios.get("https://blogapp-034p.onrender.com/blogs/");
       setBlogs(res.data);
     } catch (error) {
       console.log(error);
@@ -29,7 +29,9 @@ function App() {
   async function deleteBlog(id) {
     try {
       if (window.confirm("Are you sure")) {
-        let res = await axios.delete(`http://localhost:8000/blogs/${id}`);
+        let res = await axios.delete(
+          `https://blogapp-034p.onrender.com/blogs/${id}`
+        );
         console.log(res.data);
         setBlogs(blogs.filter((blog) => blog._id !== id));
       }
@@ -41,7 +43,7 @@ function App() {
   // update code
   // async function updateBlog(id) {
   //   try {
-  //     let res = await axios.put(`http://localhost:8000/blogs/${id}`);
+  //     let res = await axios.put(`https://blogapp-034p.onrender.com/blogs/${id}`);
   //     console.log(res.data);
   //     setBlogs(blogs.filter((blog) => blog._id !== id));
   //   } catch (error) {

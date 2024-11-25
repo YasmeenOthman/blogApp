@@ -45,7 +45,10 @@ function BlogForm({ getAllBolgs }) {
         imageUrl: blogForm.imageUrl,
         author: decoded.userId,
       };
-      let res = await axios.post("http://localhost:8000/blogs/create", newBlog);
+      let res = await axios.post(
+        "https://blogapp-034p.onrender.com/blogs/create",
+        newBlog
+      );
       alert(res.data.msg);
       getAllBolgs();
       setBlogForm(initialValue);
